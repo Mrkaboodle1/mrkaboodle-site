@@ -30,7 +30,16 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {siteConfig.services.map((s) => {
-              const hasOwnPage = ["face-painting", "balloon-twisting", "stilt-walking", "circus-workshops"].includes(s.slug);
+              const hasOwnPage = [
+                "circus-show",
+                "big-balloon-show",
+                "circus-workshops",
+                "face-painting",
+                "balloon-twisting",
+                "stilt-walking",
+                "kids-dj",
+                "fire-show",
+              ].includes(s.slug);
               const cardClasses =
                 "group block rounded-2xl bg-white p-8 ring-1 ring-white/20 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all";
               const inner = (

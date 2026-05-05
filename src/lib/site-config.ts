@@ -83,11 +83,16 @@ export const siteConfig = {
       title: "Kids DJ",
       shortDescription: "Music, games and a packed dance floor — energy from start to finish.",
     },
+    {
+      slug: "fire-show",
+      title: "Fire Show",
+      shortDescription: "Spectacular fire-juggling, fire-eating and fire-breathing for festivals and over-18 events.",
+    },
   ],
   stats: [
     { value: "15+", label: "Years on the Gold Coast" },
     { value: "100s", label: "Events delivered" },
-    { value: "7", label: "Show types available" },
+    { value: "8", label: "Show types available" },
     { value: "100%", label: "Insured + WWCC team" },
   ],
   faq: [

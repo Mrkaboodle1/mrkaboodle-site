@@ -114,7 +114,7 @@ export default function HomePage() {
             {siteConfig.services.map((s) => (
               <Link
                 key={s.slug}
-                href="/services"
+                href={`/services/${s.slug}`}
                 className="group block rounded-2xl bg-white p-8 hover:bg-[#fff100] transition-all hover:-translate-y-1 hover:shadow-2xl"
               >
                 <h3 className="font-display text-2xl uppercase tracking-wider text-[#3950a1]">
