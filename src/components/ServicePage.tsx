@@ -24,9 +24,35 @@ const accentMap = {
 
 export default function ServicePage(p: ServicePageProps) {
   const accent = accentMap[p.accentColor];
+  const cleanTitle = p.title.replace(/[.!?]+$/g, "");
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: cleanTitle,
+    description: p.intro,
+    provider: {
+      "@type": "EntertainmentBusiness",
+      name: siteConfig.legalName,
+      url: siteConfig.url,
+      email: siteConfig.email,
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Gold Coast, Queensland, Australia",
+    },
+    serviceType: "Entertainment",
+    audience: {
+      "@type": "Audience",
+      audienceType: p.perfectFor.join(", "),
+    },
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       {/* Hero with confetti backdrop */}
       <section className="relative bg-white overflow-hidden">
         {/* Subtle confetti accent (one per emoji, low opacity) */}
