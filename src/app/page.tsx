@@ -223,6 +223,54 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How it works */}
+      <section className="bg-white py-16 border-t border-[#3950a1]/10">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-4xl text-center text-[#3950a1]">
+            How it works
+          </h2>
+          <p className="mt-3 text-center text-[#343434]">
+            From enquiry to encore in three steps.
+          </p>
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {[
+              {
+                step: "1",
+                title: "Tell us about your event",
+                text: "Fill in the booking form (90 seconds) or shoot us an email. Date, headcount, age range, what kind of show.",
+                accent: "#3950a1",
+              },
+              {
+                step: "2",
+                title: "Get a quote, lock the date",
+                text: "We send a tailored quote — usually same day. A small deposit secures your slot in the calendar.",
+                accent: "#fff100",
+              },
+              {
+                step: "3",
+                title: "Show up. Watch us run it",
+                text: "We arrive 30 minutes early, set up, run the show, pack down. You enjoy the day with your guests.",
+                accent: "#ac1f23",
+              },
+            ].map((s) => (
+              <div
+                key={s.step}
+                className="relative rounded-2xl bg-white p-6 ring-1 ring-[#3950a1]/15 shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div
+                  className="absolute -top-5 left-6 inline-flex items-center justify-center w-10 h-10 rounded-full font-display text-xl text-white shadow-md"
+                  style={{ backgroundColor: s.accent === "#fff100" ? "#3950a1" : s.accent }}
+                >
+                  {s.step}
+                </div>
+                <h3 className="mt-2 font-display text-2xl text-[#3950a1]">{s.title}</h3>
+                <p className="mt-3 text-[#343434] leading-relaxed">{s.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-[#fff8b8]/30 py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -246,6 +294,51 @@ export default function HomePage() {
                 </summary>
                 <p className="mt-3 text-[#343434] leading-relaxed">{item.a}</p>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas (local SEO) */}
+      <section className="bg-white py-16 border-t border-[#3950a1]/10">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-display text-3xl sm:text-4xl text-[#3950a1]">
+            Servicing the whole Gold Coast.
+          </h2>
+          <p className="mt-3 text-[#343434] max-w-2xl mx-auto">
+            We come to you. From Coolangatta to Coomera, Surfers to Currumbin, plus
+            Brisbane, the Sunshine Coast and Tweed Heads for festivals and corporate
+            events. Travel beyond the region is happily quoted on request.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-2">
+            {[
+              "Surfers Paradise",
+              "Broadbeach",
+              "Mermaid Beach",
+              "Burleigh Heads",
+              "Palm Beach",
+              "Currumbin",
+              "Coolangatta",
+              "Robina",
+              "Varsity Lakes",
+              "Mudgeeraba",
+              "Nerang",
+              "Helensvale",
+              "Hope Island",
+              "Coomera",
+              "Pimpama",
+              "Southport",
+              "Main Beach",
+              "Tweed Heads",
+              "Kingscliff",
+              "Brisbane",
+            ].map((area) => (
+              <span
+                key={area}
+                className="inline-flex items-center rounded-full bg-[#fff8b8] px-4 py-1.5 text-sm font-bold text-[#3950a1] ring-1 ring-[#3950a1]/15"
+              >
+                📍 {area}
+              </span>
             ))}
           </div>
         </div>

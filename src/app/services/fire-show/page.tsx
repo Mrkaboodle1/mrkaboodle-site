@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import ServicePage from "@/components/ServicePage";
+import { FireArt } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
   title: "Fire Show",
@@ -16,24 +16,8 @@ export default function FireShowPage() {
       tagline="Fire-juggling. Fire-eating. Fire-breathing. Done safely."
       intro="When you want the after-dark act that has guests pulling out their phones, this is it. Fire-juggling clubs, fire-staff spinning, fire-eating finishes — choreographed to a soundtrack and run with full risk-assessment paperwork. Built for festivals, weddings, milestone birthdays and corporate events."
       emojis={["🔥", "✨", "🎆", "💥", "🌙"]}
-      heroIllustration={
-        <div className="relative aspect-[4/5] w-full max-w-md mx-auto rounded-2xl overflow-hidden">
-          <Image
-            src="/rhett/jv-pro-shot.jpg"
-            alt="Mr Kaboodle dramatic stage performance — placeholder until fire photos available"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-          />
-        </div>
-      }
-      galleryImages={[
-        { src: "/rhett/jv-pro-shot.jpg", alt: "Mr Kaboodle Magic and Circus Show stage shot" },
-        { src: "/rhett/skypoint-show.jpg", alt: "Mr Kaboodle live performance with audience" },
-        { src: "/images/mrkaboodleshow.jpg", alt: "Mr Kaboodle live show" },
-        { src: "/images/mrkaboodleshow4.jpg", alt: "Mr Kaboodle stage performance" },
-      ]}
+      heroIllustration={<FireArt />}
+      galleryImages={[]}
       includes={[
         { icon: "🔥", title: "Fire-juggling clubs", text: "The classic — three to five lit clubs, full juggling routine, cued to music." },
         { icon: "🌀", title: "Fire-staff spinning", text: "Long-form spin work with fire-tipped staff. Dramatic, choreographed, photogenic." },

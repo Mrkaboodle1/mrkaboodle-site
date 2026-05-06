@@ -270,6 +270,143 @@ export function DJArt({ className = "w-full h-auto" }: IllustrationProps) {
   );
 }
 
+/* ----------- Fire show ----------- */
+export function FireArt({ className = "w-full h-auto" }: IllustrationProps) {
+  return (
+    <svg
+      viewBox="0 0 400 500"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Fire performer with flaming torches against night sky"
+    >
+      <defs>
+        <linearGradient id="night-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#1a1a3a" />
+          <stop offset="100%" stopColor="#3a1a1a" />
+        </linearGradient>
+        <radialGradient id="flame-yellow" cx="50%" cy="60%" r="60%">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="30%" stopColor="#fff100" />
+          <stop offset="70%" stopColor="#ff8500" />
+          <stop offset="100%" stopColor="#ac1f23" />
+        </radialGradient>
+        <radialGradient id="flame-orange" cx="50%" cy="60%" r="60%">
+          <stop offset="0%" stopColor="#fff100" />
+          <stop offset="50%" stopColor="#ff5500" />
+          <stop offset="100%" stopColor="#3a0a0a" />
+        </radialGradient>
+        <radialGradient id="ember-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#fff100" />
+          <stop offset="100%" stopColor="#fff100" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+
+      {/* Night sky */}
+      <rect x="0" y="0" width="400" height="500" fill="url(#night-sky)" />
+
+      {/* Stars */}
+      <g fill={white} opacity="0.7">
+        <circle cx="40" cy="50" r="1.4" />
+        <circle cx="80" cy="30" r="1.6" />
+        <circle cx="140" cy="60" r="1.2" />
+        <circle cx="220" cy="45" r="1.8" />
+        <circle cx="290" cy="70" r="1.3" />
+        <circle cx="340" cy="35" r="1.5" />
+        <circle cx="370" cy="90" r="1.2" />
+        <circle cx="60" cy="120" r="1.3" />
+        <circle cx="320" cy="140" r="1.4" />
+      </g>
+
+      {/* Ember glow halos */}
+      <circle cx="120" cy="160" r="60" fill="url(#ember-glow)" opacity="0.7" />
+      <circle cx="280" cy="180" r="55" fill="url(#ember-glow)" opacity="0.7" />
+
+      {/* Performer body silhouette */}
+      <ellipse cx="200" cy="290" rx="45" ry="60" fill={dark} />
+      <circle cx="200" cy="220" r="22" fill={dark} />
+
+      {/* Arms holding torches */}
+      <path
+        d="M 175 270 L 110 200 L 120 195 L 185 280 Z"
+        fill={dark}
+      />
+      <path
+        d="M 225 270 L 290 200 L 280 195 L 215 280 Z"
+        fill={dark}
+      />
+
+      {/* Left torch handle */}
+      <rect x="105" y="180" width="6" height="22" fill="#5a3010" rx="2" />
+
+      {/* Left flame */}
+      <path
+        d="M 108 180 Q 95 155 100 130 Q 105 145 110 130 Q 115 150 120 135 Q 125 155 110 180 Z"
+        fill="url(#flame-yellow)"
+      />
+      <path
+        d="M 108 180 Q 100 165 102 145 Q 110 155 108 165 Q 116 155 114 145 Q 116 170 110 180 Z"
+        fill="url(#flame-orange)"
+        opacity="0.85"
+      />
+
+      {/* Right torch handle */}
+      <rect x="289" y="180" width="6" height="22" fill="#5a3010" rx="2" />
+
+      {/* Right flame */}
+      <path
+        d="M 292 180 Q 280 150 285 125 Q 290 140 295 125 Q 300 145 305 130 Q 310 155 295 180 Z"
+        fill="url(#flame-yellow)"
+      />
+      <path
+        d="M 292 180 Q 285 165 287 145 Q 295 155 293 165 Q 301 155 299 145 Q 301 170 295 180 Z"
+        fill="url(#flame-orange)"
+        opacity="0.85"
+      />
+
+      {/* Flame mouth (fire breathing finale) */}
+      <path
+        d="M 200 240 Q 195 225 205 210 Q 210 225 215 215 Q 220 230 210 245 Q 215 235 205 240 Z"
+        fill="url(#flame-yellow)"
+        opacity="0.9"
+      />
+
+      {/* Sparks rising */}
+      <g fill="#fff100">
+        <circle cx="125" cy="105" r="2" />
+        <circle cx="115" cy="80" r="1.6" opacity="0.85" />
+        <circle cx="135" cy="60" r="1.4" opacity="0.7" />
+        <circle cx="100" cy="55" r="1.2" opacity="0.55" />
+        <circle cx="295" cy="100" r="2" />
+        <circle cx="305" cy="70" r="1.6" opacity="0.85" />
+        <circle cx="285" cy="55" r="1.4" opacity="0.7" />
+        <circle cx="315" cy="40" r="1.2" opacity="0.55" />
+        <circle cx="200" cy="190" r="1.8" />
+        <circle cx="195" cy="165" r="1.4" opacity="0.7" />
+      </g>
+
+      {/* Ground */}
+      <rect x="0" y="450" width="400" height="50" fill="#1a0a0a" />
+
+      {/* Audience silhouettes */}
+      <g fill="#0a0a0a" opacity="0.95">
+        <circle cx="40" cy="450" r="14" />
+        <rect x="26" y="455" width="28" height="50" />
+        <circle cx="80" cy="455" r="12" />
+        <rect x="68" y="460" width="24" height="45" />
+        <circle cx="115" cy="450" r="14" />
+        <rect x="101" y="455" width="28" height="50" />
+        <circle cx="290" cy="450" r="14" />
+        <rect x="276" y="455" width="28" height="50" />
+        <circle cx="330" cy="455" r="12" />
+        <rect x="318" y="460" width="24" height="45" />
+        <circle cx="365" cy="450" r="14" />
+        <rect x="351" y="455" width="28" height="50" />
+      </g>
+    </svg>
+  );
+}
+
 /* ----------- Circus tent / juggling scene ----------- */
 export function CircusArt({ className = "w-full h-auto" }: IllustrationProps) {
   return (
