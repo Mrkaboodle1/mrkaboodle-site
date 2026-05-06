@@ -19,8 +19,8 @@ export default function BigBalloonShowPage() {
       heroIllustration={
         <div className="relative aspect-[4/5] w-full max-w-md mx-auto rounded-2xl overflow-hidden">
           <Image
-            src="/rhett/big-balloon-show-hero.jpg"
-            alt="Mr Kaboodle inside a giant red balloon with kids audience watching"
+            src="/rhett/balloon-show-stork.jpg"
+            alt="Mr Kaboodle in costume with a child wearing a full-body balloon stork costume"
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -29,8 +29,8 @@ export default function BigBalloonShowPage() {
         </div>
       }
       galleryImages={[
+        { src: "/rhett/big-balloon-show-hero.jpg", alt: "Mr Kaboodle inside a giant red balloon with kids audience" },
         { src: "/rhett/big-balloon-stage.jpg", alt: "Mr Kaboodle Big Balloon Show stage shot" },
-        { src: "/rhett/big-balloon-show-hero.jpg", alt: "Mr Kaboodle inside a giant balloon" },
         { src: "/rhett/skypoint-show.jpg", alt: "Mr Kaboodle live performance with audience" },
         { src: "/images/mrkaboodleshow.jpg", alt: "Mr Kaboodle live show" },
         { src: "/images/mrkaboodleshow1.jpg", alt: "Mr Kaboodle performance" },
