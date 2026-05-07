@@ -102,6 +102,80 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Two ways to party */}
+      <section className="bg-white py-16 border-t border-[#3950a1]/10">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl sm:text-4xl text-center text-[#3950a1]">
+            Two ways to party.
+          </h2>
+          <p className="mt-3 text-center text-[#343434] max-w-2xl mx-auto">
+            We come to your place — or you come to ours.
+          </p>
+          <div className="mt-10 grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl bg-[#fff8b8]/40 p-8 ring-1 ring-[#3950a1]/15 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="text-4xl">🚐</div>
+              <h3 className="mt-4 font-display text-2xl text-[#3950a1]">
+                We come to you
+              </h3>
+              <p className="mt-3 text-[#343434] leading-relaxed">
+                Backyard, hall, school, shopping centre, festival or corporate venue.
+                Anywhere across the Gold Coast, Brisbane, Sunshine Coast and Tweed Heads.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-[#343434]">
+                <li className="flex gap-2">
+                  <span className="text-[#3950a1] font-bold">✓</span>
+                  Bring the show to your space
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[#3950a1] font-bold">✓</span>
+                  Set up and pack down handled
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[#3950a1] font-bold">✓</span>
+                  Works in any indoor or outdoor space
+                </li>
+              </ul>
+              <Link
+                href="/book"
+                className="mt-6 inline-flex items-center text-[#3950a1] font-bold hover:text-[#ac1f23]"
+              >
+                Book a mobile show →
+              </Link>
+            </div>
+            <div className="rounded-2xl bg-[#3950a1] text-white p-8 shadow-md hover:shadow-2xl transition-shadow">
+              <div className="text-4xl">🎪</div>
+              <h3 className="mt-4 font-display text-2xl text-[#fff100]">
+                Come to {siteConfig.venue.name}
+              </h3>
+              <p className="mt-3 text-white/90 leading-relaxed">
+                Our own circus venue on the Gold Coast — fully kitted out with circus
+                equipment, party room and a backdrop that turns every photo into a keeper.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-white/90">
+                <li className="flex gap-2">
+                  <span className="text-[#fff100] font-bold">✓</span>
+                  Birthday parties for up to 30 kids
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[#fff100] font-bold">✓</span>
+                  Holiday programs and circus workshops
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[#fff100] font-bold">✓</span>
+                  Real circus equipment kids can try
+                </li>
+              </ul>
+              <Link
+                href="/book"
+                className="mt-6 inline-flex items-center text-[#fff100] font-bold hover:text-white"
+              >
+                Book at our venue →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services */}
       <section id="services" className="bg-[#3950a1] text-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">

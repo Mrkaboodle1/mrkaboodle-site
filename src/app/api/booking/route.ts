@@ -11,6 +11,7 @@ interface BookingPayload {
   email: string;
   phone: string;
   date: string;
+  venue: string;
   type: string;
   services: string;
   message: string;
@@ -36,6 +37,7 @@ function buildHtml(p: BookingPayload): string {
     ["Email", p.email],
     ["Phone", p.phone || "(not given)"],
     ["Event date", p.date || "(not given)"],
+    ["Venue", p.venue || "(not given)"],
     ["Event type", p.type || "(not given)"],
     ["Services", p.services || "(not given)"],
   ];
@@ -71,6 +73,7 @@ function buildText(p: BookingPayload): string {
     `Email:       ${p.email}`,
     `Phone:       ${p.phone || "(not given)"}`,
     `Event date:  ${p.date || "(not given)"}`,
+    `Venue:       ${p.venue || "(not given)"}`,
     `Event type:  ${p.type || "(not given)"}`,
     `Services:    ${p.services || "(not given)"}`,
     "",
@@ -89,6 +92,7 @@ export async function POST(request: Request) {
     email: String(formData.get("email") ?? "").trim(),
     phone: String(formData.get("phone") ?? "").trim(),
     date: String(formData.get("date") ?? "").trim(),
+    venue: String(formData.get("venue") ?? "").trim(),
     type: String(formData.get("type") ?? "").trim(),
     services: String(formData.get("services") ?? "").trim(),
     message: String(formData.get("message") ?? "").trim(),

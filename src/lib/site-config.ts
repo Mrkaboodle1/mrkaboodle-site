@@ -6,6 +6,14 @@ export const siteConfig = {
   region: "Gold Coast, Queensland, Australia",
   url: "https://www.mrkaboodle.com.au",
   email: "rhett@mrkaboodle.com.au",
+  venue: {
+    name: "BigStar Circus",
+    tagline: "Our home venue on the Gold Coast",
+    address: "Gold Coast, QLD", // Rhett to confirm exact address
+    capacity: "Up to 30 kids",
+    description:
+      "Our own circus venue on the Gold Coast — fully kitted with circus equipment, party room and a backdrop that turns every photo into a keeper. Birthday parties, holiday programs and circus workshops happen right here.",
+  },
   logo: "/brand/Kaboodle_logo.png",
   social: {
     facebook: "https://www.facebook.com/MrKaboodle",
